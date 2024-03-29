@@ -1,0 +1,174 @@
+
+.container{
+    display: flex;
+    justify-content: start;
+    /* width: 1100px; */
+}
+.pro{
+    width: 200px;
+    height: 300px;
+    margin-top: 10px;
+    padding: 5px;
+}
+.collection{
+    display: none;
+}
+.box{
+    display: none;
+}
+.d{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+.status .row{
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+.d img{
+    height: 64px;
+    width: 64px;
+    cursor: pointer;
+}
+
+table{
+    text-align: center;
+    margin: 10px;
+}
+table tr{
+    margin-bottom: 20px;
+}
+.d1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.d1 img{
+    height: 250px;
+    width: 200px;
+    margin: 10px;
+    cursor: pointer;
+}
+.d1{
+   color: darkslategrey;
+   font-weight: bold; 
+   text-align: center;
+}
+.block{
+    background-color: rgba(243, 137, 101, 0.877);
+    height: 100%;
+    width: 150px;
+    margin-left: 300px;
+    border-radius: 5px;
+}
+#img_log{
+    position: absolute;
+    margin-top: -350px;
+}
+form{
+    color: rgb(243, 98, 45);
+}
+#addon-wrapping{
+     color: rgb(243, 98, 45);
+}
+.block_login{
+    align-items: center;
+    margin-top: 150px;
+}
+form button{
+    background-color: rgba(243, 137, 101, 0.877);
+    border: transparent 1px solid;
+    padding: 10px;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 160px;
+    width: 150px;
+}
+.dash{
+    border: 1px solid grey;
+    margin-right: 15px;
+}
+.dash .row{
+    text-align: center;
+}
+.dash .row .img_client{
+    margin-left: 60px;
+    margin-top: 10px;
+}
+.dash img{
+    cursor: pointer;
+}
+.col-8 h2,.col-8 h4{
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+.serach{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.serach .nav-link {
+    border: 0.5px solid gainsboro;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+.table_client{
+    background-color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.table_client h5{
+    font-size: 15px;
+    color: rgb(90, 20, 20);
+}
+.table_client tr td{
+    padding: 20px;
+}
+.table_client img{
+    width: 200px;
+    height: 250px;
+    cursor: pointer;
+}
+/* .modal-body{
+    display: flex;
+    justify-content: space-around;
+} */
+/* .des{
+    margin-left: 150px;
+} */
+.modal-body img{
+    width: 250px;
+}
+.comment{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 20px;
+    padding: 5px;
+}
+textarea{
+    width: 500px;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 20px;
+}
+.comment img{
+    height: 60px;
+    width: 60px;
+}
