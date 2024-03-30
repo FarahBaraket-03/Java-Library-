@@ -124,7 +124,7 @@ public class JPanelEmprunt extends javax.swing.JPanel {
         //-------------------------------- INTRACTION DATA BASE -----------------------------------------------------------------
         DefaultTableModel model = new DefaultTableModel(new Object [][] {},
             new String [] {"CIN", "ID Book", "ISSUE DATE", "RETURN DATE","STATUS"});
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
         {
             String query = "select * from emprunt";
             try (Statement statement = connection.createStatement();
@@ -180,7 +180,7 @@ public class JPanelEmprunt extends javax.swing.JPanel {
                     else{
                     JOptionPane.showMessageDialog(null, "warning ! CIN WRONG", "Warning", JOptionPane.WARNING_MESSAGE);
                     };
-                    try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+                    try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
                     {
                         
                         try (Statement statement = connection.createStatement();
