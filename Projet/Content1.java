@@ -311,7 +311,7 @@ public class Content1 extends javax.swing.JPanel {
         jTable3.setShowGrid(true);
         jScrollPane3.setViewportView(jTable3);
 
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
         {
             String query = "select CIN,nom,prenom,phonenumber,email from lecteur";
             try (Statement statement = connection.createStatement();
@@ -349,7 +349,7 @@ public class Content1 extends javax.swing.JPanel {
     
      public String createCount(String req){
         String nb="0";
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
         {
             
             String query = req;
@@ -368,7 +368,7 @@ public class Content1 extends javax.swing.JPanel {
     }
     
     public void setTop(JLabel name1,JLabel img1,JLabel name2,JLabel img2,JLabel name3,JLabel img3) throws IOException{
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
         {
             String query = "select titre,url from books b , emprunt e where b.ISBN=e.isbn group by e.ISBN order by (count(cin)) desc";
             try (Statement statement = connection.createStatement();
@@ -403,7 +403,7 @@ public class Content1 extends javax.swing.JPanel {
     
     
      public DefaultTableModel createtable_dispo(DefaultTableModel model,String req){
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
         {
             String query = req;
             try (Statement statement = connection.createStatement();
@@ -430,7 +430,7 @@ public class Content1 extends javax.swing.JPanel {
     
     
     public void change_status_lec(){
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
         {
             String query = "UPDATE lecteur SET status = 0 WHERE cin in (select cin from emprunt e where date_retour<Now() and e.status=0)";
                              try (PreparedStatement statement1 = connection.prepareStatement(query)) {
