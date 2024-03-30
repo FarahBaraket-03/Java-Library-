@@ -356,7 +356,7 @@ public class JPanelBook extends javax.swing.JPanel {
         ///----------------------------- INTERACTION AVEC DATABASE ------------------------------------------------------------
         DefaultTableModel model = new DefaultTableModel(new Object [][] {},
             new String [] {"ID Book", "Book NAME", "AUTHOR", "QUANTITY"});
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
         {
             
             String query = "select * from books";
@@ -387,7 +387,7 @@ public class JPanelBook extends javax.swing.JPanel {
         //------------------------ADDITION---------------------------------------------------------------------------
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-               try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+               try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
                {
                    String id=jTextField3.getText();
                    String name=jTextField6.getText();
@@ -432,7 +432,7 @@ public class JPanelBook extends javax.swing.JPanel {
         //--------------------------SUPPRESSION---------------------------------------------------------------------
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-               try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+               try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
                {
                    String id=jTextField3.getText();
                    String name=jTextField6.getText();
@@ -476,7 +476,7 @@ public class JPanelBook extends javax.swing.JPanel {
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 
-               try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+               try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
                {
                    String id=jTextField3.getText();
                    String name=jTextField6.getText();
@@ -533,7 +533,7 @@ public class JPanelBook extends javax.swing.JPanel {
                     else{
                     JOptionPane.showMessageDialog(null, "warning ! ENTER NAME OF BOOK", "Warning", JOptionPane.WARNING_MESSAGE);
                     };
-                    try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "love2PMandGOT7")) 
+                    try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/lib", "root", "password")) 
                     {
                         
                         try (Statement statement = connection.createStatement();
