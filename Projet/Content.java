@@ -39,7 +39,7 @@ public class Content  extends JPanel{
         model.addColumn("Code");
         model.addColumn("name of BOOK");
         model.addColumn("AUTHEUR");
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fsm", "root", "love2PMandGOT7")) 
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fsm", "root", "password")) 
         {
             String query = req;
             try (Statement statement = connection.createStatement();
